@@ -30,11 +30,11 @@ export default function Page() {
             </nav>
           </div>
           <div className="ml-auto flex items-center gap-2">
-            <Link href="/resume/stephen-bohner-resume.pdf" download="Stephen-Bohner-Resume.pdf" target="_blank">
+            <Link href="https://90ck8cgfuv.ufs.sh/f/AWmmVUCJvRdFaBhRaJPylTx138bW7Y2RAmnZDNoMzisFchpI" target="_blank">
               <Button variant="outline" className="flex items-center gap-2">
                 <Download className="h-4 w-4" />
-                Resume
-              </Button>
+                  Resume
+                </Button>
             </Link>
             <ThemeToggle />
           </div>
