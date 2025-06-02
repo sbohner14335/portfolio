@@ -4,7 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import SkillsExpertise from "./components/skills-expertise"
 import Referrals from "./components/referrals"
-import { ThemeToggle } from "@/components/theme-toggle"
+import { ThemeToggle } from "./components/theme-toggle"
 
 export default function Page() {
   return (
@@ -14,7 +14,7 @@ export default function Page() {
           <div className="mr-4 hidden md:flex">
             <Link href="#about" className="mr-6 flex items-center space-x-2">
               <span className="hidden font-bold text-xl bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent sm:inline-block">
-                  stephenbohner.dev
+                stephenbohner.dev
               </span>
             </Link>
             <nav className="flex items-center space-x-6 text-sm font-medium">
@@ -42,7 +42,7 @@ export default function Page() {
       </header>
 
       <main className="container px-4 md:px-6">
-        <section id="about" className="py-12 md:py-24 lg:py-32">
+        <section id="about" className="py-8 md:py-16 lg:py-20">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="relative w-32 h-32 mb-6">
               <Image
@@ -97,15 +97,39 @@ export default function Page() {
           </div>
         </section>
 
-        <section id="skills" className="py-12 md:py-24 lg:py-32">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center">
+        {/* Divider */}
+        <div className="relative py-8">
+          <div className="absolute inset-0 flex items-center">
+            <div className="w-full border-t border-border"></div>
+          </div>
+          <div className="relative flex justify-center">
+            <div className="bg-background px-4">
+              <div className="h-2 w-2 rounded-full bg-primary/30"></div>
+            </div>
+          </div>
+        </div>
+
+        <section id="skills" className="py-8 md:py-12 lg:py-16">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8 text-center">
             Skills & Expertise
           </h2>
           <SkillsExpertise />
         </section>
 
-        <section id="referrals" className="py-12 md:py-24 lg:py-32">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center">
+        {/* Divider */}
+        <div className="relative py-8">
+          <div className="absolute inset-0 flex items-center">
+            <div className="w-full border-t border-border"></div>
+          </div>
+          <div className="relative flex justify-center">
+            <div className="bg-background px-4">
+              <div className="h-2 w-2 rounded-full bg-primary/30"></div>
+            </div>
+          </div>
+        </div>
+
+        <section id="referrals" className="py-8 md:py-12 lg:py-16">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8 text-center">
             Professional Referrals
           </h2>
           <Referrals />
