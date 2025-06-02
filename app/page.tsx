@@ -14,7 +14,7 @@ export default function Page() {
           <div className="mr-4 hidden md:flex">
             <Link href="#about" className="mr-6 flex items-center space-x-2">
               <span className="hidden font-bold text-xl bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent sm:inline-block">
-                Stephen.dev
+                  stephenbohner.dev
               </span>
             </Link>
             <nav className="flex items-center space-x-6 text-sm font-medium">
@@ -58,7 +58,7 @@ export default function Page() {
               </h1>
               <h2 className="text-xl font-semibold text-primary mb-4">Senior Full Stack Software Engineer</h2>
               <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                Building digital experiences with modern technologies. Focused on creating elegant solutions to complex
+                Building digital experiences with modern technologies. Focused on creating simple solutions to complex
                 problems.
               </p>
             </div>
@@ -114,7 +114,7 @@ export default function Page() {
 
       <footer className="border-t">
         <div className="container flex py-6 w-full shrink-0 items-center justify-center px-4 md:px-6">
-          <p className="text-xs text-gray-500 dark:text-gray-400">© 2024 Stephen.dev. All rights reserved.</p>
+          <p className="text-xs text-gray-500 dark:text-gray-400">© 2025 stephenbohner.dev. All rights reserved.</p>
         </div>
       </footer>
     </div>
