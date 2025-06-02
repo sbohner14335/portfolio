@@ -10,7 +10,7 @@ export default function Page() {
   return (
     <div className="min-h-screen bg-background">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-14 items-center px-4 md:px-6">
+        <div className="container flex h-14 items-center px-4 md:px-6 mx-auto">
           <div className="mr-4 hidden md:flex">
             <Link href="#about" className="mr-6 flex items-center space-x-2">
               <span className="hidden font-bold text-xl bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent sm:inline-block">
@@ -41,12 +41,12 @@ export default function Page() {
         </div>
       </header>
 
-      <main className="container px-4 md:px-6">
+      <main className="container px-4 md:px-6 mx-auto">
         <section id="about" className="py-8 md:py-16 lg:py-20">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="relative w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-6">
               <Image
-                src="/images/stephen-profile.png"
+                src="https://90ck8cgfuv.ufs.sh/f/AWmmVUCJvRdF7a393N6TQeHKEsj3Gm0WYrLFCX4UZ5PkARbo"
                 alt="Stephen Bohner"
                 fill
                 className="object-cover rounded-full border-4 border-primary/20"
@@ -137,7 +137,7 @@ export default function Page() {
       </main>
 
       <footer className="border-t">
-        <div className="container flex py-6 w-full shrink-0 items-center justify-center px-4 md:px-6">
+        <div className="container flex py-6 w-full shrink-0 items-center justify-center px-4 md:px-6 mx-auto">
           <p className="text-xs text-gray-500 dark:text-gray-400">© 2025 stephenbohner.dev. All rights reserved.</p>
         </div>
       </footer>

@@ -40,13 +40,13 @@ const skillCategories = [
   {
     title: "AI Automations",
     icon: <Bot className="h-6 w-6" />,
-    skills: ["Machine Learning", "NLP", "Watsonx.ai", "Milvus", "docling", "RAG", "Ollama", "Langchain", "Langflow"],
+    skills: ["Machine Learning", "NLP", "Watsonx.ai", "Milvus", "docling", "RAG", "Ollama", "Langchain", "MCP", "Copilot", "Langflow"],
     description: "Implementing AI solutions and automation workflows to solve complex business problems.",
   },
   {
     title: "Development Tools",
     icon: <Code className="h-6 w-6" />,
-    skills: ["VS Code", "Git", "GitHub", "Postman", "Jest", "ESLint", "Prettier", "Figma", "continue.dev"],
+    skills: ["VS Code", "Git", "GitHub", "Postman", "Jest", "ESLint", "Prettier", "Figma", "continue.dev", "excalidraw", "v0"],
     description: "Utilizing modern development tools and workflows for efficient coding practices.",
   },
 ]
