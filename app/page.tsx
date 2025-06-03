@@ -110,7 +110,7 @@ export default function Page() {
         </div>
 
         <section id="skills" className="py-8 md:py-12 lg:py-16">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8 text-center">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-16 text-center">
             Skills & Expertise
           </h2>
           <SkillsExpertise />
@@ -129,7 +129,7 @@ export default function Page() {
         </div>
 
         <section id="referrals" className="py-8 md:py-12 lg:py-16">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8 text-center">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-16 text-center">
             Professional Referrals
           </h2>
           <Referrals />
