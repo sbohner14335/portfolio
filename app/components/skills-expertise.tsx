@@ -1,11 +1,11 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Code, Database, Globe, Server, Zap, Bot } from "lucide-react"
+import { Code, Database, Server, Zap, Bot, MonitorCheck } from "lucide-react"
 
 const skillCategories = [
   {
     title: "Frontend Development",
-    icon: <Globe className="h-6 w-6" />,
+    icon: <MonitorCheck className="h-6 w-6" />,
     skills: [
       "React",
       "Next.js",
@@ -34,14 +34,14 @@ const skillCategories = [
   {
     title: "DevOps & Cloud",
     icon: <Zap className="h-6 w-6" />,
-    skills: ["AWS", "IBM Cloud", "Docker", "CI/CD", "OpenShift", "Linux", "Vercel", "Deployment", "Monitoring"],
-    description: "Streamlining development workflows and deploying applications to the cloud.",
+    skills: ["AWS", "IBM Cloud", "Docker", "CI/CD", "OpenShift", "Linux", "Vercel", "Deployment", "Monitoring", "vLLM"],
+    description: "Streamlining development workflows and deploying application Infrastructure.",
   },
   {
     title: "AI Automations",
     icon: <Bot className="h-6 w-6" />,
     skills: ["Machine Learning", "NLP", "Watsonx.ai", "Milvus", "docling", "RAG", "Ollama", "Langchain", "MCP", "Copilot", "Langflow"],
-    description: "Implementing AI solutions and automation workflows to solve complex business problems.",
+    description: "Implementing LLM solutions and automation workflows to solve complex business problems.",
   },
   {
     title: "Development Tools",
