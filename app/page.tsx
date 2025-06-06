@@ -2,9 +2,9 @@ import { Button } from "@/components/ui/button"
 import { Github, Linkedin, Mail, Download } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
-import SkillsExpertise from "./components/skills-expertise"
-import Referrals from "./components/referrals"
-import { ThemeToggle } from "./components/theme-toggle"
+import SkillsExpertise from "../components/ui/skills-expertise"
+import Referrals from "../components/ui/referrals"
+import { ThemeToggle } from "../components/ui/theme-toggle"
 
 export default function Page() {
   return (
