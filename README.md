@@ -1,4 +1,4 @@
-# Portfolio
+# Stephen Bohner's Portfolio
 
 *Automatically synced with your [v0.dev](https://v0.dev) deployments*
 
