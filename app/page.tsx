@@ -44,12 +44,12 @@ export default function Page() {
       <main className="container px-4 md:px-6 mx-auto">
         <section id="about" className="py-8 md:py-16 lg:py-20">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="relative w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-6">
+            <div className="relative w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-6 profile-image-container">
               <Image
                 src="https://90ck8cgfuv.ufs.sh/f/AWmmVUCJvRdF7a393N6TQeHKEsj3Gm0WYrLFCX4UZ5PkARbo"
                 alt="Stephen Bohner"
                 fill
-                className="object-cover rounded-full border-4 border-primary/20"
+                className="object-cover rounded-full border-4 border-primary/20 profile-image"
               />
             </div>
             <div className="space-y-2">
