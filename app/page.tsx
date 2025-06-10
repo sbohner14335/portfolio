@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Github, Linkedin, Mail, Download } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import Divider from "../components/ui/divider"
 import SkillsExpertise from "../components/ui/skills-expertise"
 import Referrals from "../components/ui/referrals"
 import { ThemeToggle } from "../components/ui/theme-toggle"
@@ -17,7 +18,7 @@ export default function Page() {
                 stephenbohner.dev
               </span>
             </Link>
-            <nav className="flex items-center space-x-6 text-sm font-medium">
+            <nav className="flex items-center space-x-6 text-sm font-semibold">
               <Link href="#about" className="transition-colors hover:text-foreground/80">
                 About
               </Link>
@@ -58,7 +59,7 @@ export default function Page() {
                 Stephen Bohner
               </h1>
               <h2 className="text-xl font-semibold text-primary mb-4">Senior Full Stack Software Engineer</h2>
-              <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
+              <p className="mx-auto max-w-[700px] text-gray-800 md:text-xl dark:text-gray-400">
                 Building digital experiences with modern technologies. Focused on creating simple solutions to complex
                 problems.
               </p>
@@ -98,17 +99,7 @@ export default function Page() {
           </div>
         </section>
 
-        {/* Divider */}
-        <div className="relative py-8">
-          <div className="absolute inset-0 flex items-center">
-            <div className="w-full border-t border-border"></div>
-          </div>
-          <div className="relative flex justify-center">
-            <div className="bg-background px-4">
-              <div className="h-2 w-2 rounded-full bg-primary/30"></div>
-            </div>
-          </div>
-        </div>
+        <Divider/>
 
         <section id="skills" className="py-8 md:py-12 lg:py-16">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-16 text-center">
@@ -117,17 +108,7 @@ export default function Page() {
           <SkillsExpertise />
         </section>
 
-        {/* Divider */}
-        <div className="relative py-8">
-          <div className="absolute inset-0 flex items-center">
-            <div className="w-full border-t border-border"></div>
-          </div>
-          <div className="relative flex justify-center">
-            <div className="bg-background px-4">
-              <div className="h-2 w-2 rounded-full bg-primary/30"></div>
-            </div>
-          </div>
-        </div>
+        <Divider/>
 
         <section id="referrals" className="py-8 md:py-12 lg:py-16">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-16 text-center">
