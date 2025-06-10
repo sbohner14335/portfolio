@@ -49,6 +49,7 @@ export default function Page() {
                 src="https://90ck8cgfuv.ufs.sh/f/AWmmVUCJvRdF7a393N6TQeHKEsj3Gm0WYrLFCX4UZ5PkARbo"
                 alt="Stephen Bohner"
                 fill
+                priority={true}
                 className="object-cover rounded-full border-4 border-primary/20 profile-image"
               />
             </div>
