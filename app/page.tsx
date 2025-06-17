@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button"
 import { Github, Linkedin, Mail, Download } from "lucide-react"
 import Link from "next/link"
-import Image from "next/image"
 import Divider from "../components/ui/divider"
 import SkillsExpertise from "../components/ui/skills-expertise"
 import Referrals from "../components/ui/referrals"
 import { ThemeToggle } from "../components/ui/theme-toggle"
+import ProfileImage from "../components/ui/profile-image"
 
 export default function Page() {
   return (
@@ -19,19 +19,31 @@ export default function Page() {
               </span>
             </Link>
             <nav className="flex items-center space-x-6 text-sm font-semibold">
-              <Link href="#about" className="transition-colors hover:text-foreground/80">
+              <Link
+                href="#about"
+                className="transition-colors hover:text-foreground/80"
+              >
                 About
               </Link>
-              <Link href="#skills" className="transition-colors hover:text-foreground/80">
+              <Link
+                href="#skills"
+                className="transition-colors hover:text-foreground/80"
+              >
                 Skills
               </Link>
-              <Link href="#referrals" className="transition-colors hover:text-foreground/80">
+              <Link
+                href="#referrals"
+                className="transition-colors hover:text-foreground/80"
+              >
                 Referrals
               </Link>
             </nav>
           </div>
           <div className="ml-auto flex items-center gap-2">
-            <Link href="https://90ck8cgfuv.ufs.sh/f/AWmmVUCJvRdFaBhRaJPylTx138bW7Y2RAmnZDNoMzisFchpI" target="_blank">
+            <Link
+              href="https://90ck8cgfuv.ufs.sh/f/AWmmVUCJvRdFaBhRaJPylTx138bW7Y2RAmnZDNoMzisFchpI"
+              target="_blank"
+            >
               <Button variant="outline" className="flex items-center gap-2">
                 <Download className="h-4 w-4" />
                 Resume
@@ -45,23 +57,21 @@ export default function Page() {
       <main className="container px-4 md:px-6 mx-auto">
         <section id="about" className="py-8 md:py-16 lg:py-20">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="relative w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-6 profile-image-container">
-              <Image
-                src="https://90ck8cgfuv.ufs.sh/f/AWmmVUCJvRdF7a393N6TQeHKEsj3Gm0WYrLFCX4UZ5PkARbo"
-                alt="Stephen Bohner"
-                fill
-                priority={true}
-                className="object-cover rounded-full border-4 border-primary/20 profile-image"
-              />
-            </div>
+            <ProfileImage
+              src="https://90ck8cgfuv.ufs.sh/f/AWmmVUCJvRdF7a393N6TQeHKEsj3Gm0WYrLFCX4UZ5PkARbo"
+              alt="Stephen Bohner"
+              className="w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-6"
+            />
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
                 Stephen Bohner
               </h1>
-              <h2 className="text-xl font-semibold text-primary mb-4">Senior Full Stack Software Engineer</h2>
+              <h2 className="text-xl font-semibold text-primary mb-4">
+                Senior Full Stack Software Engineer
+              </h2>
               <p className="mx-auto max-w-[700px] text-gray-800 md:text-xl dark:text-gray-400">
-                Building digital experiences with modern technologies. Focused on creating simple solutions to complex
-                problems.
+                Building digital experiences with modern technologies. Focused
+                on creating simple solutions to complex problems.
               </p>
             </div>
             <div className="flex items-center gap-4">
@@ -75,7 +85,10 @@ export default function Page() {
                   <span className="sr-only">GitHub</span>
                 </Button>
               </Link>
-              <Link href="https://www.linkedin.com/in/sbohner14335/" target="_blank">
+              <Link
+                href="https://www.linkedin.com/in/sbohner14335/"
+                target="_blank"
+              >
                 <Button
                   variant="outline"
                   size="lg"
@@ -99,7 +112,7 @@ export default function Page() {
           </div>
         </section>
 
-        <Divider/>
+        <Divider />
 
         <section id="skills" className="py-8 md:py-12 lg:py-16">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-16 text-center">
@@ -108,7 +121,7 @@ export default function Page() {
           <SkillsExpertise />
         </section>
 
-        <Divider/>
+        <Divider />
 
         <section id="referrals" className="py-8 md:py-12 lg:py-16">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-16 text-center">
@@ -120,7 +133,9 @@ export default function Page() {
 
       <footer className="border-t">
         <div className="container flex py-6 w-full shrink-0 items-center justify-center px-4 md:px-6 mx-auto">
-          <p className="text-xs text-gray-500 dark:text-gray-400">© 2025 stephenbohner.dev. All rights reserved.</p>
+          <p className="text-xs text-gray-500 dark:text-gray-400">
+            © 2025 stephenbohner.dev. All rights reserved.
+          </p>
         </div>
       </footer>
     </div>
