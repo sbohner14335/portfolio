@@ -22,25 +22,25 @@ const skillCategories = [
   {
     title: "Backend Development",
     icon: <Server className="h-6 w-6" />,
-    skills: ["Node.js", "Express.js", "Python", "FastAPI", "RESTful APIs", "Microservices", "OIDC (JWT)", "OpenAPI"],
+    skills: ["Node.js", "Express.js", "Python", "FastAPI", "RESTful APIs", "Microservices", "OIDC (JWT)", "OpenAPI", "RBAC"],
     description: "Building robust server-side applications and APIs with scalable architecture.",
   },
   {
     title: "Database Management",
     icon: <Database className="h-6 w-6" />,
-    skills: ["PostgreSQL", "NoSQL", "MySQL", "Redis", "Db2", "Database Design", "Optimization"],
+    skills: ["PostgreSQL", "Milvus", "Elasticsearch", "NoSQL", "MySQL", "Redis", "Db2", "Database Design", "Optimization"],
     description: "Designing and managing efficient database systems for optimal performance.",
   },
   {
     title: "DevOps & Cloud",
     icon: <Zap className="h-6 w-6" />,
-    skills: ["AWS", "IBM Cloud", "Docker", "CI/CD", "OpenShift", "Linux", "Vercel", "Deployment", "Monitoring", "vLLM"],
+    skills: ["AWS", "IBM Cloud", "Docker", "CI/CD", "OpenShift", "Linux", "Vercel", "Deployment", "Proxy", "Monitoring", "vLLM"],
     description: "Streamlining development workflows and deploying application Infrastructure.",
   },
   {
     title: "AI Automations",
     icon: <Bot className="h-6 w-6" />,
-    skills: ["Machine Learning", "NLP", "Watsonx.ai", "Milvus", "docling", "RAG", "Ollama", "Langchain", "MCP", "Copilot", "Langflow"],
+    skills: ["MCP", "NLP", "watsonx.ai", "Machine Learning", "docling", "RAG", "Ollama", "Langchain", "Copilot", "Langflow"],
     description: "Implementing LLM solutions and automation workflows to solve complex business problems.",
   },
   {
@@ -72,7 +72,7 @@ export default function SkillsExpertise() {
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
-            <p className="text-sm text-muted-foreground transition-colors duration-300 group-hover:text-foreground/80">
+            <p className="pb-1 text-sm text-muted-foreground transition-colors duration-300 group-hover:text-foreground/80">
               {category.description}
             </p>
             <div className="flex flex-wrap gap-2">
