@@ -10,7 +10,10 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Stephen Bohner - Senior Full Stack Software Engineer",
   description: "Senior full stack software engineer portfolio showcasing skills and expertise",
-  generator: "v0.dev",
+  applicationName: "Stephen Bohner's Portfolio",
+  authors: [{ name: "Stephen Bohner", url: "https://github.com/sbohner14335/" }],
+  generator: "Next.js",
+  creator: "Stephen Bohner",
 }
 
 export default function RootLayout({
