@@ -4,7 +4,7 @@ import Link from "next/link"
 import Divider from "../components/ui/divider"
 import SkillsExpertise from "../components/ui/skills-expertise"
 import Referrals from "../components/ui/referrals"
-import { ThemeToggle } from "../components/ui/theme-toggle"
+import ThemeToggle from "../components/ui/theme-toggle"
 import ProfileImage from "../components/ui/profile-image"
 
 export default function Page() {
