@@ -38,7 +38,7 @@ export default function Referrals() {
       {referrals.map((referral, index) => (
         <Card
           key={index}
-          className="h-full group cursor-pointer transition-all duration-500 hover:shadow-xl hover:shadow-primary/15 hover:-translate-y-2 hover:border-primary/30"
+          className="h-full"
           style={{
             animationDelay: `${index * 150}ms`,
             animation: "slideInFromBottom 0.8s ease-out forwards",
@@ -46,12 +46,12 @@ export default function Referrals() {
         >
           <CardContent className="p-6 transition-all duration-300 group-hover:bg-gradient-to-br group-hover:from-primary/5 group-hover:to-transparent h-full flex flex-col">
             <div className="flex flex-col items-center text-center space-y-4 flex-1">
-              <Quote className="h-8 w-8 text-primary/20 transition-all duration-300 group-hover:text-primary/40 group-hover:scale-110" />
-              <p className="text-sm text-muted-foreground leading-relaxed transition-all duration-300 group-hover:text-foreground/90 flex-1 flex items-center">
+              <Quote className="h-8 w-8 text-primary/20 transition-all duration-300 group-hover:text-primary group-hover:scale-110" />
+              <p className="text-sm text-muted-foreground leading-relaxed transition-all duration-300 group-hover:text-foreground flex-1 flex items-center">
                 "{referral.content}"
               </p>
               <div className="flex flex-col items-center gap-3 mt-auto">
-                <Avatar className="h-12 w-12 transition-all duration-300 group-hover:scale-110 group-hover:ring-2 group-hover:ring-primary/20">
+                <Avatar className="h-12 w-12 transition-all duration-300 group-hover:scale-110 group-hover:ring-2 group-hover:ring-primary/50">
                   <AvatarImage src={referral.image || "/placeholder.svg"} alt={referral.name} />
                   <AvatarFallback className="bg-primary/10 text-primary font-semibold transition-all duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
                     {referral.initials}
@@ -61,7 +61,7 @@ export default function Referrals() {
                   <p className="font-semibold text-sm transition-colors duration-300 group-hover:text-primary">
                     {referral.name}
                   </p>
-                  <p className="text-xs text-muted-foreground transition-colors duration-300 group-hover:text-foreground/70">
+                  <p className="text-xs text-muted-foreground transition-colors duration-300 group-hover:text-foreground">
                     {referral.role} at {referral.company}
                   </p>
                 </div>

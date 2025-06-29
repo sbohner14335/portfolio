@@ -57,10 +57,10 @@ export default function SkillsExpertise() {
       {skillCategories.map((category, index) => (
         <Card
           key={category.title}
-          className="h-full group cursor-pointer transition-all duration-300 hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-2 hover:border-primary/30 hover:scale-105"
+          className="h-full"
           style={{
             animationDelay: `${index * 100}ms`,
-            animation: "fadeInUp 0.6s ease-out forwards",
+            animation: "fadeInUp 0.8s ease-out forwards",
           }}
         >
           <CardHeader className="transition-colors duration-300 group-hover:bg-primary/5">
@@ -72,7 +72,7 @@ export default function SkillsExpertise() {
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
-            <p className="pb-1 text-sm text-muted-foreground transition-colors duration-300 group-hover:text-foreground/80">
+            <p className="pb-1 text-sm text-muted-foreground transition-colors duration-300 group-hover:text-foreground">
               {category.description}
             </p>
             <div className="flex flex-wrap gap-2">
