@@ -75,7 +75,7 @@ export default function Page() {
               <h2 className="text-xl font-semibold text-primary mb-4">
                 Senior Full Stack Software Engineer
               </h2>
-              <p className="mx-auto max-w-[700px] text-gray-800 md:text-xl dark:text-gray-400">
+              <p className="mx-auto max-w-[700px] text-gray-800 md:text-xl dark:text-gray-300">
                 Building digital experiences with modern technologies. Focused
                 on creating simple solutions to complex problems.
               </p>
@@ -85,7 +85,6 @@ export default function Page() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="group transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/20 hover:border-primary/50 hover:bg-primary/5"
                 >
                   <Github className="h-5 w-5 transition-all duration-300 group-hover:scale-110 group-hover:text-primary" />
                   <span className="sr-only">GitHub</span>
@@ -98,7 +97,6 @@ export default function Page() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="group transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/20 hover:border-primary/50 hover:bg-primary/5"
                 >
                   <Linkedin className="h-5 w-5 transition-all duration-300 group-hover:scale-110 group-hover:text-primary" />
                   <span className="sr-only">LinkedIn</span>
@@ -108,7 +106,6 @@ export default function Page() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="group transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/20 hover:border-primary/50 hover:bg-primary/5"
                 >
                   <Mail className="h-5 w-5 transition-all duration-300 group-hover:scale-110 group-hover:text-primary" />
                   <span className="sr-only">Email</span>
