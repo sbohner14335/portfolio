@@ -4,10 +4,12 @@ import { useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Github, Linkedin, Mail } from "lucide-react"
 import Link from "next/link"
+import { useTheme } from "next-themes"
 import ProfileImage from "./profile-image"
 
 export default function BackgroundAnimation() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
+  const { theme } = useTheme()
 
   useEffect(() => {
     if (!canvasRef.current) return
@@ -49,7 +51,10 @@ export default function BackgroundAnimation() {
 
       draw() {
         if (!ctx) return
-        ctx.fillStyle = "rgba(255, 255, 255, 0.5)"
+        const particleColor = theme === "dark" 
+          ? "rgba(255, 255, 255, 0.5)" 
+          : "rgba(0, 0, 0, 0.3)"
+        ctx.fillStyle = particleColor
         ctx.beginPath()
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2)
         ctx.fill()
@@ -82,7 +87,7 @@ export default function BackgroundAnimation() {
 
     window.addEventListener("resize", handleResize)
     return () => window.removeEventListener("resize", handleResize)
-  }, [])
+  }, [theme])
 
   return (
     <div className="relative h-screen w-full overflow-hidden">
