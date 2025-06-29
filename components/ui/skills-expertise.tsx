@@ -34,13 +34,13 @@ const skillCategories = [
   {
     title: "DevOps & Cloud",
     icon: <Zap className="h-6 w-6" />,
-    skills: ["AWS", "IBM Cloud", "Docker", "CI/CD", "OpenShift", "Linux", "Vercel", "Deployment", "Proxy", "Monitoring", "vLLM"],
+    skills: ["IBM Cloud", "OpenShift", "AWS", "Docker", "CI/CD", "Linux", "Vercel", "Deployment", "Proxy", "Monitoring", "vLLM"],
     description: "Streamlining development workflows and deploying application Infrastructure.",
   },
   {
     title: "AI Automations",
     icon: <Bot className="h-6 w-6" />,
-    skills: ["MCP", "NLP", "watsonx.ai", "Machine Learning", "docling", "RAG", "Ollama", "Langchain", "Copilot", "Langflow"],
+    skills: ["MCP", "NLP", "watsonx", "Machine Learning", "docling", "RAG", "Ollama", "Langchain", "Copilot", "Langflow"],
     description: "Implementing LLM solutions and automation workflows to solve complex business problems.",
   },
   {
