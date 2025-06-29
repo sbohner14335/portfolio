@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button"
-import { Github, Linkedin, Mail, Download } from "lucide-react"
+import { Download } from "lucide-react"
 import Link from "next/link"
 import Divider from "../components/ui/divider"
+import BackgroundAnimation from "@/components/ui/bg-animation"
 import SkillsExpertise from "../components/ui/skills-expertise"
 import Referrals from "../components/ui/referrals"
 import ThemeToggle from "../components/ui/theme-toggle"
-import ProfileImage from "../components/ui/profile-image"
 
 export default function Page() {
   return (
@@ -16,7 +16,7 @@ export default function Page() {
         <div className="absolute right-0 top-0 h-[500px] w-[500px] bg-purple-800/10 blur-[100px]" />
         <div className="absolute bottom-0 left-0 h-[500px] w-[500px] bg-purple-800/10 blur-[100px]" />
       </div>
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <header id="about" className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-14 items-center px-4 md:px-6 mx-auto">
           <div className="mr-4 hidden md:flex">
             <Link href="#about" className="mr-6 flex items-center space-x-2">
@@ -60,61 +60,8 @@ export default function Page() {
         </div>
       </header>
 
-      <main className="container px-4 md:px-6 mx-auto">
-        <section id="about" className="py-8 md:py-16 lg:py-20">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <ProfileImage
-              src="https://90ck8cgfuv.ufs.sh/f/AWmmVUCJvRdF7a393N6TQeHKEsj3Gm0WYrLFCX4UZ5PkARbo"
-              alt="Stephen Bohner"
-              className="w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-6"
-            />
-            <div className="space-y-2">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                Stephen Bohner
-              </h1>
-              <h2 className="text-xl font-semibold text-primary mb-4">
-                Senior Full Stack Software Engineer
-              </h2>
-              <p className="mx-auto max-w-[700px] text-gray-800 md:text-xl dark:text-gray-300">
-                Building digital experiences with modern technologies. Focused
-                on creating simple solutions to complex problems.
-              </p>
-            </div>
-            <div className="flex items-center gap-4">
-              <Link href="https://github.com/sbohner14335" target="_blank">
-                <Button
-                  variant="outline"
-                  size="lg"
-                >
-                  <Github className="h-5 w-5 transition-all duration-300 group-hover:scale-110 group-hover:text-primary" />
-                  <span className="sr-only">GitHub</span>
-                </Button>
-              </Link>
-              <Link
-                href="https://www.linkedin.com/in/sbohner14335/"
-                target="_blank"
-              >
-                <Button
-                  variant="outline"
-                  size="lg"
-                >
-                  <Linkedin className="h-5 w-5 transition-all duration-300 group-hover:scale-110 group-hover:text-primary" />
-                  <span className="sr-only">LinkedIn</span>
-                </Button>
-              </Link>
-              <Link href="mailto:sbohner14335@gmail.com">
-                <Button
-                  variant="outline"
-                  size="lg"
-                >
-                  <Mail className="h-5 w-5 transition-all duration-300 group-hover:scale-110 group-hover:text-primary" />
-                  <span className="sr-only">Email</span>
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </section>
-
+      <BackgroundAnimation />
+      <main className="container px-4 md:px-6 -mt-9 mx-auto">
         <Divider />
 
         <section id="skills" className="py-8 md:py-12 lg:py-16">
