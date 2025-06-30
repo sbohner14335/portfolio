@@ -9,7 +9,7 @@ import ThemeToggle from "../components/ui/theme-toggle"
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-background">
+    <div>
       {/* Background gradient */}
       <div className="pointer-events-none fixed inset-0">
         <div className="absolute inset-0 bg-gradient-to-b via-background/90" />
