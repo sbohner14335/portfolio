@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Download } from "lucide-react"
 import Link from "next/link"
 import Divider from "../components/ui/divider"
-import BackgroundAnimation from "@/components/ui/bg-animation"
+import ProfileAnimation from "@/components/ui/profile"
 import SkillsExpertise from "../components/ui/skills-expertise"
 import Referrals from "../components/ui/referrals"
 import ThemeToggle from "../components/ui/theme-toggle"
@@ -13,8 +13,8 @@ export default function Page() {
       {/* Background gradient */}
       <div className="pointer-events-none fixed inset-0">
         <div className="absolute inset-0 bg-gradient-to-b via-background/90" />
-        <div className="absolute right-0 top-0 h-[500px] w-[500px] bg-purple-800/10 blur-[100px]" />
-        <div className="absolute bottom-0 left-0 h-[500px] w-[500px] bg-purple-800/10 blur-[100px]" />
+        <div className="absolute right-0 top-0 h-[500px] w-[500px] bg-purple-800/5 blur-[100px]" />
+        <div className="absolute bottom-0 left-0 h-[500px] w-[500px] bg-purple-800/5 blur-[100px]" />
       </div>
       <header id="about" className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-14 items-center px-4 md:px-6 mx-auto">
@@ -60,7 +60,7 @@ export default function Page() {
         </div>
       </header>
 
-      <BackgroundAnimation />
+      <ProfileAnimation />
       <main className="container px-4 md:px-6 -mt-9 mx-auto">
         <Divider />
 

@@ -7,7 +7,7 @@ import Link from "next/link"
 import { useTheme } from "next-themes"
 import ProfileImage from "./profile-image"
 
-export default function BackgroundAnimation() {
+export default function ProfileAnimation() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const { theme } = useTheme()
 
