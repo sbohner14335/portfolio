@@ -61,7 +61,7 @@ class Particle {
 
 export default function ProfileAnimation() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
-  const { theme } = useTheme()
+  const { resolvedTheme } = useTheme()
 
   useEffect(() => {
     if (!canvasRef.current) return
@@ -77,7 +77,7 @@ export default function ProfileAnimation() {
     const particleCount = 100
 
     for (let i = 0; i < particleCount; i++) {
-      particles.push(new Particle(canvas.width, canvas.height, ctx, theme))
+      particles.push(new Particle(canvas.width, canvas.height, ctx, resolvedTheme))
     }
 
     function animate() {
@@ -87,7 +87,7 @@ export default function ProfileAnimation() {
 
       for (const particle of particles) {
         particle.update(currentCanvas.width, currentCanvas.height)
-        particle.theme = theme
+        particle.theme = resolvedTheme
         particle.draw()
       }
 
@@ -104,7 +104,7 @@ export default function ProfileAnimation() {
 
     window.addEventListener("resize", handleResize)
     return () => window.removeEventListener("resize", handleResize)
-  }, [theme])
+    }, [resolvedTheme])
 
   return (
     <div className="relative h-[95vh] w-full overflow-hidden">
