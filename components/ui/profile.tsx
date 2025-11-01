@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Github, Linkedin, Mail } from "lucide-react"
 import Link from "next/link"
@@ -62,9 +62,19 @@ class Particle {
 export default function ProfileAnimation() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const { theme } = useTheme()
+  const [isAnimationReady, setIsAnimationReady] = useState(false)
 
   useEffect(() => {
-    if (!canvasRef.current) return
+    // Defer canvas animation until after initial render for better performance
+    const timer = setTimeout(() => {
+      setIsAnimationReady(true)
+    }, 100)
+
+    return () => clearTimeout(timer)
+  }, [])
+
+  useEffect(() => {
+    if (!canvasRef.current || !isAnimationReady) return
 
     const canvas = canvasRef.current
     const ctx = canvas.getContext("2d")
@@ -80,6 +90,8 @@ export default function ProfileAnimation() {
       particles.push(new Particle(canvas.width, canvas.height, ctx, theme))
     }
 
+    let animationFrameId: number
+
     function animate() {
       if (!canvasRef.current) return
       const currentCanvas = canvasRef.current
@@ -91,7 +103,7 @@ export default function ProfileAnimation() {
         particle.draw()
       }
 
-      requestAnimationFrame(animate)
+      animationFrameId = requestAnimationFrame(animate)
     }
 
     animate()
@@ -103,8 +115,13 @@ export default function ProfileAnimation() {
     }
 
     window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-  }, [theme])
+    return () => {
+      window.removeEventListener("resize", handleResize)
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId)
+      }
+    }
+  }, [theme, isAnimationReady])
 
   return (
     <div className="relative h-[95vh] w-full overflow-hidden">
