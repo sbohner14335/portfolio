@@ -1,35 +1,11 @@
 import { Button } from "@/components/ui/button"
 import { Download } from "lucide-react"
 import Link from "next/link"
-import dynamic from "next/dynamic"
 import Divider from "../components/ui/divider"
+import ProfileAnimation from "@/components/ui/profile"
+import SkillsExpertise from "../components/ui/skills-expertise"
+import Referrals from "../components/ui/referrals"
 import ThemeToggle from "../components/ui/theme-toggle"
-
-// Lazy load heavy components below the fold
-const ProfileAnimation = dynamic(() => import("@/components/ui/profile"), {
-  loading: () => (
-    <div className="relative h-[95vh] w-full overflow-hidden flex items-center justify-center">
-      <div className="animate-pulse text-muted-foreground">Loading...</div>
-    </div>
-  ),
-  ssr: true, // Keep SSR for initial paint
-})
-
-const SkillsExpertise = dynamic(() => import("../components/ui/skills-expertise"), {
-  loading: () => (
-    <div className="py-8 md:py-12 lg:py-16">
-      <div className="animate-pulse text-center text-muted-foreground">Loading skills...</div>
-    </div>
-  ),
-})
-
-const Referrals = dynamic(() => import("../components/ui/referrals"), {
-  loading: () => (
-    <div className="py-8 md:py-12 lg:py-16">
-      <div className="animate-pulse text-center text-muted-foreground">Loading referrals...</div>
-    </div>
-  ),
-})
 
 export default function Page() {
   return (
