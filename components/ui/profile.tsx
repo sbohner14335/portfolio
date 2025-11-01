@@ -7,6 +7,58 @@ import Link from "next/link"
 import { useTheme } from "next-themes"
 import ProfileImage from "./profile-image"
 
+class Particle {
+  x: number
+  y: number
+  size: number
+  speedX: number
+  speedY: number
+  canvasWidth: number
+  canvasHeight: number
+  ctx: CanvasRenderingContext2D
+  theme: string | undefined
+
+  constructor(
+    canvasWidth: number,
+    canvasHeight: number,
+    ctx: CanvasRenderingContext2D,
+    theme: string | undefined
+  ) {
+    this.canvasWidth = canvasWidth
+    this.canvasHeight = canvasHeight
+    this.ctx = ctx
+    this.theme = theme
+    this.x = Math.random() * canvasWidth
+    this.y = Math.random() * canvasHeight
+    this.size = Math.random() * 2 + 0.1
+    this.speedX = Math.random() * 2 - 1
+    this.speedY = Math.random() * 2 - 1
+  }
+
+  update(canvasWidth: number, canvasHeight: number) {
+    this.canvasWidth = canvasWidth
+    this.canvasHeight = canvasHeight
+    this.x += this.speedX
+    this.y += this.speedY
+
+    if (this.x > canvasWidth) this.x = 0
+    if (this.x < 0) this.x = canvasWidth
+    if (this.y > canvasHeight) this.y = 0
+    if (this.y < 0) this.y = canvasHeight
+  }
+
+  draw() {
+    const particleColor =
+      this.theme === "dark"
+        ? "rgba(255, 255, 255, 0.5)"
+        : "rgba(0, 0, 0, 0.3)"
+    this.ctx.fillStyle = particleColor
+    this.ctx.beginPath()
+    this.ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2)
+    this.ctx.fill()
+  }
+}
+
 export default function ProfileAnimation() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const { theme } = useTheme()
@@ -24,53 +76,18 @@ export default function ProfileAnimation() {
     const particles: Particle[] = []
     const particleCount = 100
 
-    class Particle {
-      x: number
-      y: number
-      size: number
-      speedX: number
-      speedY: number
-
-      constructor() {
-        this.x = Math.random() * canvas.width
-        this.y = Math.random() * canvas.height
-        this.size = Math.random() * 2 + 0.1
-        this.speedX = Math.random() * 2 - 1
-        this.speedY = Math.random() * 2 - 1
-      }
-
-      update() {
-        this.x += this.speedX
-        this.y += this.speedY
-
-        if (this.x > canvas.width) this.x = 0
-        if (this.x < 0) this.x = canvas.width
-        if (this.y > canvas.height) this.y = 0
-        if (this.y < 0) this.y = canvas.height
-      }
-
-      draw() {
-        if (!ctx) return
-        const particleColor = theme === "dark" 
-          ? "rgba(255, 255, 255, 0.5)" 
-          : "rgba(0, 0, 0, 0.3)"
-        ctx.fillStyle = particleColor
-        ctx.beginPath()
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2)
-        ctx.fill()
-      }
-    }
-
     for (let i = 0; i < particleCount; i++) {
-      particles.push(new Particle())
+      particles.push(new Particle(canvas.width, canvas.height, ctx, theme))
     }
 
     function animate() {
-      if (!ctx) return
-      ctx.clearRect(0, 0, canvas.width, canvas.height)
+      if (!canvasRef.current) return
+      const currentCanvas = canvasRef.current
+      ctx.clearRect(0, 0, currentCanvas.width, currentCanvas.height)
 
       for (const particle of particles) {
-        particle.update()
+        particle.update(currentCanvas.width, currentCanvas.height)
+        particle.theme = theme
         particle.draw()
       }
 
@@ -149,4 +166,4 @@ export default function ProfileAnimation() {
       </div>
     </div>
   )
-} 
+}

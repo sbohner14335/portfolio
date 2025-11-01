@@ -48,7 +48,7 @@ export default function Referrals() {
             <div className="flex flex-col items-center text-center space-y-4 flex-1">
               <Quote className="h-8 w-8 text-primary/20 transition-all duration-300 group-hover:text-primary group-hover:scale-110" />
               <p className="text-sm text-muted-foreground leading-relaxed transition-all duration-300 group-hover:text-foreground flex-1 flex items-center">
-                "{referral.content}"
+                &ldquo;{referral.content}&rdquo;
               </p>
               <div className="flex flex-col items-center gap-3 mt-auto">
                 <Avatar className="h-12 w-12 transition-all duration-300 group-hover:scale-110 group-hover:ring-2 group-hover:ring-primary/50">
