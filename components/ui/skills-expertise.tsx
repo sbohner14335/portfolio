@@ -7,14 +7,14 @@ const skillCategories = [
     title: "Frontend Development",
     icon: <MonitorCheck className="h-6 w-6" />,
     skills: [
-      "React",
       "Next.js",
       "TypeScript",
       "JavaScript",
-      "HTML5",
-      "CSS3",
+      "React",
       "TailwindCSS",
       "Carbon",
+      "HTML5",
+      "CSS3",
       "Responsive Design",
     ],
     description: "Creating engaging and interactive user interfaces with modern frameworks and best practices.",
@@ -22,13 +22,13 @@ const skillCategories = [
   {
     title: "Backend Development",
     icon: <Server className="h-6 w-6" />,
-    skills: ["Node.js", "Express.js", "Python", "FastAPI", "RESTful APIs", "Microservices", "OIDC (JWT)", "OpenAPI", "RBAC"],
+    skills: ["Node.js", "Express.js", "Python", "FastAPI", "RESTful APIs", "Microservices", "Open ID Connect (JWT)", "OpenAPI", "RBAC"],
     description: "Building robust server-side applications and APIs with scalable architecture.",
   },
   {
     title: "Database Management",
     icon: <Database className="h-6 w-6" />,
-    skills: ["PostgreSQL", "Milvus", "Elasticsearch", "NoSQL", "MySQL", "Redis", "Db2", "Database Design", "Optimization"],
+    skills: ["PostgreSQL", "Milvus", "Elasticsearch", "NoSQL", "Redis", "Db2", "SQLite", "MySQL", "Database Design", "Optimization"],
     description: "Designing and managing efficient database systems for optimal performance.",
   },
   {
@@ -46,7 +46,7 @@ const skillCategories = [
   {
     title: "Development Tools",
     icon: <Code className="h-6 w-6" />,
-    skills: ["VS Code", "Git", "GitHub", "Postman", "Jest", "ESLint", "Prettier", "Figma", "continue.dev", "excalidraw", "v0"],
+    skills: ["VS Code", "Cursor", "Git", "GitHub", "Postman", "npm", "Jest", "ESLint", "Prettier", "Figma", "excalidraw", "v0"],
     description: "Utilizing modern development tools and workflows for efficient coding practices.",
   },
 ]
