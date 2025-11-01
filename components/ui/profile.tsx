@@ -83,7 +83,7 @@ export default function ProfileAnimation() {
     function animate() {
       if (!canvasRef.current) return
       const currentCanvas = canvasRef.current
-      ctx.clearRect(0, 0, currentCanvas.width, currentCanvas.height)
+      ctx?.clearRect(0, 0, currentCanvas.width, currentCanvas.height)
 
       for (const particle of particles) {
         particle.update(currentCanvas.width, currentCanvas.height)
