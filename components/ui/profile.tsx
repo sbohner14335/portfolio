@@ -104,7 +104,7 @@ export default function ProfileAnimation() {
 
     window.addEventListener("resize", handleResize)
     return () => window.removeEventListener("resize", handleResize)
-    }, [resolvedTheme])
+  }, [resolvedTheme])
 
   return (
     <div className="relative h-[95vh] w-full overflow-hidden">
@@ -124,7 +124,7 @@ export default function ProfileAnimation() {
               <h2 className="text-xl font-semibold text-primary mb-4">
                 Senior Full Stack Software Engineer
               </h2>
-              <p className="mx-auto max-w-[700px] text-gray-800 md:text-xl dark:text-gray-300">
+              <p className="mx-auto max-w-[700px] md:text-xl">
                 Building digital experiences with modern technologies. Focused
                 on creating simple solutions to complex problems.
               </p>
@@ -132,6 +132,7 @@ export default function ProfileAnimation() {
             <div className="flex items-center gap-4">
               <Link href="https://github.com/sbohner14335" target="_blank">
                 <Button
+                  className="cursor-pointer"
                   variant="outline"
                   size="lg"
                 >
@@ -144,6 +145,7 @@ export default function ProfileAnimation() {
                 target="_blank"
               >
                 <Button
+                  className="cursor-pointer"
                   variant="outline"
                   size="lg"
                 >
@@ -153,6 +155,7 @@ export default function ProfileAnimation() {
               </Link>
               <Link href="mailto:sbohner14335@gmail.com">
                 <Button
+                  className="cursor-pointer"
                   variant="outline"
                   size="lg"
                 >
