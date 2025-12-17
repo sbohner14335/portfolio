@@ -1,13 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Download } from "lucide-react"
 import Link from "next/link"
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
+import { MainNav } from "@/components/ui/main-nav"
 import Divider from "../components/ui/divider"
 import ProfileAnimation from "@/components/ui/profile"
 import SkillsExpertise from "../components/ui/skills-expertise"
@@ -25,25 +19,7 @@ export default function Page() {
                 stephenbohner.dev
               </span>
             </Link>
-            <NavigationMenu className="max-w-full justify-start">
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                    <Link href="#about">About</Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                    <Link href="#skills">Skills</Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                    <Link href="#referrals">Referrals</Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
+            <MainNav />
           </div>
           <div className="ml-auto flex items-center gap-2">
             <Link
