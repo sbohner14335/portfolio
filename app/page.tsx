@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Download } from "lucide-react"
 import Link from "next/link"
+import { MainNav } from "@/components/ui/main-nav"
 import Divider from "../components/ui/divider"
 import ProfileAnimation from "@/components/ui/profile"
 import SkillsExpertise from "../components/ui/skills-expertise"
@@ -18,26 +19,7 @@ export default function Page() {
                 stephenbohner.dev
               </span>
             </Link>
-            <nav className="flex items-center space-x-6 text-sm font-semibold">
-              <Link
-                href="#about"
-                className="transition-colors text-foreground/80 hover:text-foreground"
-              >
-                About
-              </Link>
-              <Link
-                href="#skills"
-                className="transition-colors text-foreground/80 hover:text-foreground"
-              >
-                Skills
-              </Link>
-              <Link
-                href="#referrals"
-                className="transition-colors text-foreground/80 hover:text-foreground"
-              >
-                Referrals
-              </Link>
-            </nav>
+            <MainNav />
           </div>
           <div className="ml-auto flex items-center gap-2">
             <Link
