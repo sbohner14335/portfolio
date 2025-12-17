@@ -13,17 +13,17 @@ export function MainNav() {
     return (
         <NavigationMenu>
             <NavigationMenuList>
-                <NavigationMenuItem key="about">
+                <NavigationMenuItem>
                     <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
                         <Link href="#about">About</Link>
                     </NavigationMenuLink>
                 </NavigationMenuItem>
-                <NavigationMenuItem key="skills">
+                <NavigationMenuItem>
                     <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
                         <Link href="#skills">Skills</Link>
                     </NavigationMenuLink>
                 </NavigationMenuItem>
-                <NavigationMenuItem key="referrals">
+                <NavigationMenuItem>
                     <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
                         <Link href="#referrals">Referrals</Link>
                     </NavigationMenuLink>
