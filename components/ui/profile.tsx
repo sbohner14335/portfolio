@@ -141,7 +141,7 @@ export default function ProfileAnimation() {
                 </Button>
               </Link>
               <Link
-                href="https://www.linkedin.com/in/sbohner14335/"
+                href="https://www.linkedin.com/in/sbohner14335"
                 target="_blank"
               >
                 <Button
