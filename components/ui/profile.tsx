@@ -124,7 +124,7 @@ export default function ProfileAnimation() {
               <h2 className="text-xl font-semibold text-primary mb-4">
                 Senior Full Stack Software Engineer
               </h2>
-              <p className="mx-auto max-w-[700px] md:text-xl">
+              <p className="mx-auto max-w-[700px] md:text-xl pb-2">
                 Building digital experiences with modern technologies. Focused
                 on creating simple solutions to complex problems.
               </p>

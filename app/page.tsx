@@ -4,6 +4,7 @@ import Link from "next/link"
 import { MainNav } from "@/components/ui/main-nav"
 import Divider from "../components/ui/divider"
 import ProfileAnimation from "@/components/ui/profile"
+import Projects from "../components/ui/projects"
 import SkillsExpertise from "../components/ui/skills-expertise"
 import Referrals from "../components/ui/referrals"
 import ThemeToggle from "../components/ui/theme-toggle"
@@ -38,6 +39,15 @@ export default function Page() {
 
       <ProfileAnimation />
       <main className="container px-4 md:px-6 -mt-9 mx-auto">
+        <Divider />
+
+        <section id="projects" className="py-8 md:py-12 lg:py-16">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-16 text-center">
+            My Projects
+          </h2>
+          <Projects />
+        </section>
+
         <Divider />
 
         <section id="skills" className="py-8 md:py-12 lg:py-16">

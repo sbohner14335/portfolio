@@ -20,6 +20,11 @@ export function MainNav() {
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                     <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                        <Link href="#projects">Projects</Link>
+                    </NavigationMenuLink>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                    <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
                         <Link href="#skills">Skills</Link>
                     </NavigationMenuLink>
                 </NavigationMenuItem>
