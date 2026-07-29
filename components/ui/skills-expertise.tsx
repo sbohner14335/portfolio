@@ -5,7 +5,7 @@ import { Code, Database, Server, Zap, Bot, MonitorCheck } from "lucide-react"
 const skillCategories = [
   {
     title: "Frontend Development",
-    icon: <MonitorCheck className="h-6 w-6" />,
+    icon: <MonitorCheck className="size-6" />,
     skills: [
       "Next.js",
       "TypeScript",
@@ -21,31 +21,31 @@ const skillCategories = [
   },
   {
     title: "Backend Development",
-    icon: <Server className="h-6 w-6" />,
+    icon: <Server className="size-6" />,
     skills: ["Node.js", "Express.js", "Python", "FastAPI", "RESTful APIs", "Microservices", "Open ID Connect (JWT)", "OpenAPI", "RBAC"],
     description: "Building robust server-side applications and APIs with scalable architecture.",
   },
   {
     title: "Database Management",
-    icon: <Database className="h-6 w-6" />,
+    icon: <Database className="size-6" />,
     skills: ["PostgreSQL", "Milvus", "Elasticsearch", "NoSQL", "Redis", "Db2", "SQLite", "MySQL", "Database Design", "Optimization"],
     description: "Designing and managing efficient database systems for optimal performance.",
   },
   {
     title: "DevOps & Cloud",
-    icon: <Zap className="h-6 w-6" />,
+    icon: <Zap className="size-6" />,
     skills: ["IBM Cloud", "OpenShift", "AWS", "Docker", "CI/CD", "Linux", "Vercel", "Deployment", "Proxy", "Monitoring", "vLLM"],
     description: "Streamlining development workflows and deploying application Infrastructure.",
   },
   {
     title: "AI Automations",
-    icon: <Bot className="h-6 w-6" />,
+    icon: <Bot className="size-6" />,
     skills: ["MCP", "NLP", "watsonx", "Machine Learning", "docling", "RAG", "Ollama", "Langchain", "Copilot", "Langflow"],
     description: "Implementing LLM solutions and automation workflows to solve complex business problems.",
   },
   {
     title: "Development Tools",
-    icon: <Code className="h-6 w-6" />,
+    icon: <Code className="size-6" />,
     skills: ["VS Code", "Cursor", "Git", "GitHub", "Postman", "npm", "Jest", "ESLint", "Prettier", "Figma", "excalidraw", "v0"],
     description: "Utilizing modern development tools and workflows for efficient coding practices.",
   },
@@ -57,7 +57,7 @@ export default function SkillsExpertise() {
       {skillCategories.map((category, index) => (
         <Card
           key={category.title}
-          className="h-full"
+          className="group h-full cursor-default transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02] hover:border-primary/30 hover:shadow-xl hover:shadow-primary/20"
           style={{
             animationDelay: `${index * 100}ms`,
             animation: "fadeInUp 0.8s ease-out forwards",
@@ -65,14 +65,14 @@ export default function SkillsExpertise() {
         >
           <CardHeader className="transition-colors duration-300 group-hover:bg-primary/5">
             <CardTitle className="flex items-center gap-3">
-              <div className="p-3 bg-primary/10 rounded-lg text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-primary-foreground group-hover:scale-110">
+              <div className="rounded-lg bg-primary/10 p-3 text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground">
                 {category.icon}
               </div>
               <span className="transition-colors duration-300 group-hover:text-primary">{category.title}</span>
             </CardTitle>
           </CardHeader>
-          <CardContent className="space-y-4">
-            <p className="pb-1 text-sm text-muted-foreground transition-colors duration-300 group-hover:text-foreground">
+          <CardContent className="flex flex-col gap-4">
+            <p className="text-sm/6 text-muted-foreground transition-colors duration-300 group-hover:text-foreground">
               {category.description}
             </p>
             <div className="flex flex-wrap gap-2">
@@ -80,7 +80,7 @@ export default function SkillsExpertise() {
                 <Badge
                   key={skill}
                   variant="secondary"
-                  className="text-xs transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:scale-105 cursor-pointer"
+                  className="text-xs transition-all duration-300 hover:scale-105 hover:bg-primary hover:text-primary-foreground"
                   style={{
                     animationDelay: `${index * 100 + skillIndex * 50}ms`,
                     animation: "fadeIn 0.4s ease-out forwards",

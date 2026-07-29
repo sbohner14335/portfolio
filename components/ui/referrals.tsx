@@ -37,28 +37,28 @@ export default function Referrals() {
     <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {referrals.map((referral, index) => (
         <Card
-          key={index}
-          className="h-full"
+          key={referral.name}
+          className="group h-full cursor-default transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02] hover:border-primary/30 hover:shadow-xl hover:shadow-primary/20"
           style={{
             animationDelay: `${index * 150}ms`,
             animation: "slideInFromBottom 0.8s ease-out forwards",
           }}
         >
-          <CardContent className="p-6 transition-all duration-300 group-hover:bg-gradient-to-br group-hover:from-primary/5 group-hover:to-transparent h-full flex flex-col">
-            <div className="flex flex-col items-center text-center space-y-4 flex-1">
-              <Quote className="h-8 w-8 text-primary/20 transition-all duration-300 group-hover:text-primary group-hover:scale-110" />
-              <p className="text-sm text-muted-foreground leading-relaxed transition-all duration-300 group-hover:text-foreground flex-1 flex items-center">
+          <CardContent className="flex h-full flex-col bg-transparent p-6 transition-all duration-300 group-hover:bg-linear-to-br group-hover:from-primary/5 group-hover:to-transparent">
+            <div className="flex flex-1 flex-col items-center gap-4 text-center">
+              <Quote className="size-8 text-primary/20 transition-all duration-300 group-hover:scale-110 group-hover:text-primary" />
+              <p className="flex flex-1 items-center text-sm/6 text-muted-foreground transition-all duration-300 group-hover:text-foreground">
                 &ldquo;{referral.content}&rdquo;
               </p>
-              <div className="flex flex-col items-center gap-3 mt-auto">
-                <Avatar className="h-12 w-12 transition-all duration-300 group-hover:scale-110 group-hover:ring-2 group-hover:ring-primary/50">
-                  <AvatarImage src={referral.image || "/placeholder.svg"} alt={referral.name} />
+              <div className="mt-auto flex flex-col items-center gap-3">
+                <Avatar className="size-12 transition-all duration-300 group-hover:scale-110 group-hover:ring-2 group-hover:ring-primary/50">
+                  <AvatarImage src={referral.image} alt={referral.name} />
                   <AvatarFallback className="bg-primary/10 text-primary font-semibold transition-all duration-300 group-hover:bg-primary group-hover:text-primary-foreground">
                     {referral.initials}
                   </AvatarFallback>
                 </Avatar>
                 <div className="transition-all duration-300">
-                  <p className="font-semibold text-sm transition-colors duration-300 group-hover:text-primary">
+                  <p className="text-sm font-semibold transition-colors duration-300 group-hover:text-primary">
                     {referral.name}
                   </p>
                   <p className="text-xs text-muted-foreground transition-colors duration-300 group-hover:text-foreground">

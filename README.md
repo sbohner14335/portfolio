@@ -11,7 +11,8 @@
 Requires having [Node.js](https://nodejs.org/en) & [pnpm](https://pnpm.io/installation) installed.
 
 ### Installation
-Ensure you are using Node.js v22 or higher
+Ensure you are using Node.js v24 or higher:
+
 ```bash
 nvm use
 ```

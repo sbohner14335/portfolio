@@ -6,7 +6,7 @@ export default function Divider() {
             </div>
             <div className="relative flex justify-center">
                 <div className="bg-background px-4">
-                    <div className="h-2 w-2 rounded-full bg-primary/30"></div>
+                    <div className="size-2 rounded-full bg-primary/30"></div>
                 </div>
             </div>
         </div>

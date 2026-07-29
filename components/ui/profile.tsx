@@ -69,32 +69,46 @@ export default function ProfileAnimation() {
     const canvas = canvasRef.current
     const ctx = canvas.getContext("2d")
     if (!ctx) return
+    const drawContext: CanvasRenderingContext2D = ctx
 
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
 
     const particles: Particle[] = []
     const particleCount = 100
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches
+    let animationFrameId: number | undefined
 
     for (let i = 0; i < particleCount; i++) {
-      particles.push(new Particle(canvas.width, canvas.height, ctx, resolvedTheme))
+      particles.push(
+        new Particle(canvas.width, canvas.height, drawContext, resolvedTheme)
+      )
     }
 
-    function animate() {
+    function drawFrame() {
       if (!canvasRef.current) return
       const currentCanvas = canvasRef.current
-      ctx?.clearRect(0, 0, currentCanvas.width, currentCanvas.height)
+      drawContext.clearRect(0, 0, currentCanvas.width, currentCanvas.height)
 
       for (const particle of particles) {
         particle.update(currentCanvas.width, currentCanvas.height)
         particle.theme = resolvedTheme
         particle.draw()
       }
-
-      requestAnimationFrame(animate)
     }
 
-    animate()
+    function animate() {
+      drawFrame()
+      animationFrameId = requestAnimationFrame(animate)
+    }
+
+    if (prefersReducedMotion) {
+      drawFrame()
+    } else {
+      animate()
+    }
 
     const handleResize = () => {
       if (!canvasRef.current) return
@@ -103,7 +117,12 @@ export default function ProfileAnimation() {
     }
 
     window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
+    return () => {
+      window.removeEventListener("resize", handleResize)
+      if (animationFrameId !== undefined) {
+        cancelAnimationFrame(animationFrameId)
+      }
+    }
   }, [resolvedTheme])
 
   return (
@@ -111,58 +130,51 @@ export default function ProfileAnimation() {
       <canvas ref={canvasRef} className="absolute inset-0 h-full w-full" />
       <div className="relative z-10 flex items-center justify-center h-full">
         <section className="px-4 md:px-6 py-8 md:py-16 lg:py-20">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+          <div className="flex flex-col items-center justify-center gap-4 text-center">
             <ProfileImage
               src="https://90ck8cgfuv.ufs.sh/f/AWmmVUCJvRdF7a393N6TQeHKEsj3Gm0WYrLFCX4UZ5PkARbo"
               alt="Stephen Bohner"
-              className="w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mb-6"
+              className="mb-4 size-40 md:size-48 lg:size-56"
             />
-            <div className="space-y-2">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+            <div className="flex flex-col gap-2">
+              <h1 className="text-3xl/9 font-bold tracking-tighter sm:text-4xl/10 md:text-5xl/12 lg:text-6xl/15">
                 Stephen Bohner
               </h1>
-              <h2 className="text-xl font-semibold text-primary mb-4">
+              <h2 className="text-xl/7 font-semibold text-primary pt-1 pb-2">
                 Senior Full Stack Software Engineer
               </h2>
-              <p className="mx-auto max-w-[700px] md:text-xl pb-2">
-                Building digital experiences with modern technologies. Focused
-                on creating simple solutions to complex problems.
+              <p className="mx-auto max-w-3xl md:text-xl/7 pb-2">
+                Building digital experiences with modern technologies.
+                <br />Focused on creating simple solutions to complex problems.
               </p>
             </div>
             <div className="flex items-center gap-4">
-              <Link href="https://github.com/sbohner14335" target="_blank">
-                <Button
-                  className="cursor-pointer"
-                  variant="outline"
-                  size="lg"
+              <Button asChild variant="outline" size="lg">
+                <Link
+                  href="https://github.com/sbohner14335"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <Github className="h-5 w-5 transition-all duration-300 group-hover:scale-110 group-hover:text-primary" />
+                  <Github className="size-5 transition-all duration-300 group-hover:scale-110 group-hover:text-primary" />
                   <span className="sr-only">GitHub</span>
-                </Button>
-              </Link>
-              <Link
-                href="https://www.linkedin.com/in/sbohner14335"
-                target="_blank"
-              >
-                <Button
-                  className="cursor-pointer"
-                  variant="outline"
-                  size="lg"
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg">
+                <Link
+                  href="https://www.linkedin.com/in/sbohner14335"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <Linkedin className="h-5 w-5 transition-all duration-300 group-hover:scale-110 group-hover:text-primary" />
+                  <Linkedin className="size-5 transition-all duration-300 group-hover:scale-110 group-hover:text-primary" />
                   <span className="sr-only">LinkedIn</span>
-                </Button>
-              </Link>
-              <Link href="mailto:sbohner14335@gmail.com">
-                <Button
-                  className="cursor-pointer"
-                  variant="outline"
-                  size="lg"
-                >
-                  <Mail className="h-5 w-5 transition-all duration-300 group-hover:scale-110 group-hover:text-primary" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg">
+                <Link href="mailto:sbohner14335@gmail.com">
+                  <Mail className="size-5 transition-all duration-300 group-hover:scale-110 group-hover:text-primary" />
                   <span className="sr-only">Email</span>
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </div>
           </div>
         </section>
