@@ -27,5 +27,5 @@ pnpm install
 Start the development server with HMR:
 
 ```bash
-pnpm run dev
+pnpm dev
 ```
