@@ -126,7 +126,7 @@ export default function ProfileAnimation() {
   }, [resolvedTheme])
 
   return (
-    <div className="relative h-[95vh] w-full overflow-hidden">
+    <div id="about" className="relative h-[95vh] w-full scroll-mt-14 overflow-hidden">
       <canvas ref={canvasRef} className="absolute inset-0 h-full w-full" />
       <div className="relative z-10 flex items-center justify-center h-full">
         <section className="px-4 md:px-6 py-8 md:py-16 lg:py-20">
