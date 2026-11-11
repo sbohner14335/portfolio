@@ -58,7 +58,7 @@ export default function ProfileImage({ src, alt, className = "" }: ProfileImageP
         alt={alt}
         fill
         priority
-        sizes="(max-width: 768px) 10rem, (max-width: 1024px) 12rem, 14rem"
+        sizes="(max-width: 639px) 8rem, (max-width: 767px) 10rem, (max-width: 1023px) 12rem, 14rem"
         className={`profile-image rounded-full border-4 border-primary/20 object-cover transition-opacity duration-500 ${
           imageLoaded ? "opacity-100" : "opacity-0"
         }`}

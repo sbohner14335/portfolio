@@ -13,17 +13,22 @@ export default function Page() {
   return (
     <div>
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur-sm supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-14 items-center px-4 md:px-6 mx-auto">
-          <div className="hidden md:flex">
-            <Link href="#about" className="mr-6 flex items-center">
-              <span className="hidden bg-linear-to-r from-primary to-primary/70 bg-clip-text text-xl font-bold text-transparent sm:inline-block">
-                stephenbohner.dev
-              </span>
-            </Link>
+        <div className="container mx-auto grid grid-cols-[auto_1fr] items-center gap-x-4 px-4 md:px-6 lg:grid-cols-[auto_auto_1fr]">
+          <Link
+            href="#about"
+            aria-label="Stephen Bohner, back to About"
+            className="col-start-1 row-start-1 flex min-h-14 items-center rounded-sm text-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
+          >
+            <span className="font-mono text-2xl/8 font-bold tracking-tighter sm:hidden" aria-hidden="true">SB.</span>
+            <span className="hidden bg-linear-to-r from-primary to-primary/70 bg-clip-text text-xl/7 font-bold text-transparent sm:inline-block">
+              stephenbohner.dev
+            </span>
+          </Link>
+          <div className="col-span-2 row-start-2 -mx-4 border-t border-border/50 px-2 md:-mx-6 lg:col-span-1 lg:col-start-2 lg:row-start-1 lg:mx-0 lg:border-0 lg:px-0">
             <MainNav />
           </div>
-          <div className="ml-auto flex items-center gap-2">
-            <Button asChild variant="outline">
+          <div className="col-start-2 row-start-1 flex items-center justify-self-end gap-2 lg:col-start-3">
+            <Button asChild variant="outline" className="h-11 px-3 sm:px-4">
               <Link
                 href="https://90ck8cgfuv.ufs.sh/f/AWmmVUCJvRdFaBhRaJPylTx138bW7Y2RAmnZDNoMzisFchpI"
                 target="_blank"
@@ -42,7 +47,7 @@ export default function Page() {
       <main className="container px-4 md:px-6 -mt-9 mx-auto">
         <Divider />
 
-        <section id="projects" className="flex flex-col gap-16 py-8 md:py-12 lg:py-16">
+        <section id="projects" className="flex scroll-mt-28 flex-col gap-8 py-8 md:gap-16 md:py-12 lg:scroll-mt-16 lg:py-16">
           <h2 className="text-center text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             My Projects
           </h2>
@@ -51,7 +56,7 @@ export default function Page() {
 
         <Divider />
 
-        <section id="skills" className="flex flex-col gap-16 py-8 md:py-12 lg:py-16">
+        <section id="skills" className="flex scroll-mt-28 flex-col gap-8 py-8 md:gap-16 md:py-12 lg:scroll-mt-16 lg:py-16">
           <h2 className="text-center text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             Skills & Expertise
           </h2>
@@ -60,7 +65,7 @@ export default function Page() {
 
         <Divider />
 
-        <section id="referrals" className="flex flex-col gap-16 py-8 md:py-12 lg:py-16">
+        <section id="referrals" className="flex scroll-mt-28 flex-col gap-8 py-8 md:gap-16 md:py-12 lg:scroll-mt-16 lg:py-16">
           <h2 className="text-center text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             Professional Referrals
           </h2>

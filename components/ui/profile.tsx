@@ -71,11 +71,11 @@ export default function ProfileAnimation() {
     if (!ctx) return
     const drawContext: CanvasRenderingContext2D = ctx
 
-    canvas.width = window.innerWidth
-    canvas.height = window.innerHeight
+    canvas.width = canvas.clientWidth
+    canvas.height = canvas.clientHeight
 
     const particles: Particle[] = []
-    const particleCount = 100
+    const particleCount = window.innerWidth < 768 ? 40 : 100
     const prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     ).matches
@@ -112,8 +112,8 @@ export default function ProfileAnimation() {
 
     const handleResize = () => {
       if (!canvasRef.current) return
-      canvasRef.current.width = window.innerWidth
-      canvasRef.current.height = window.innerHeight
+      canvasRef.current.width = canvasRef.current.clientWidth
+      canvasRef.current.height = canvasRef.current.clientHeight
     }
 
     window.addEventListener("resize", handleResize)
@@ -126,26 +126,26 @@ export default function ProfileAnimation() {
   }, [resolvedTheme])
 
   return (
-    <div id="about" className="relative h-[95vh] w-full scroll-mt-14 overflow-hidden">
+    <div id="about" className="relative grid min-h-[calc(100svh-7rem)] w-full scroll-mt-28 overflow-hidden lg:min-h-[95svh] lg:scroll-mt-16">
       <canvas ref={canvasRef} className="absolute inset-0 h-full w-full" />
-      <div className="relative z-10 flex items-center justify-center h-full">
-        <section className="px-4 md:px-6 py-8 md:py-16 lg:py-20">
+      <div className="relative z-10 flex items-center justify-center">
+        <section className="px-4 py-10 md:px-6 md:py-16 lg:py-20">
           <div className="flex flex-col items-center justify-center gap-4 text-center">
             <ProfileImage
               src="https://90ck8cgfuv.ufs.sh/f/AWmmVUCJvRdF7a393N6TQeHKEsj3Gm0WYrLFCX4UZ5PkARbo"
               alt="Stephen Bohner"
-              className="mb-4 size-40 md:size-48 lg:size-56"
+              className="mb-2 size-32 sm:size-40 md:mb-4 md:size-48 lg:size-56"
             />
             <div className="flex flex-col gap-2">
               <h1 className="text-3xl/9 font-bold tracking-tighter sm:text-4xl/10 md:text-5xl/12 lg:text-6xl/15">
                 Stephen Bohner
               </h1>
-              <h2 className="text-xl/7 font-semibold text-primary pt-1 pb-2">
+              <h2 className="pt-1 pb-2 text-lg/6 font-semibold text-primary sm:text-xl/7">
                 Senior Full Stack Software Engineer
               </h2>
-              <p className="mx-auto max-w-3xl md:text-xl/7 pb-2">
+              <p className="mx-auto max-w-3xl pb-2 text-base/6 md:text-xl/7">
                 Building digital experiences with modern technologies.
-                <br />Focused on creating simple solutions to complex problems.
+                <br className="hidden sm:block" />{" "}Focused on creating simple solutions to complex problems.
               </p>
             </div>
             <div className="flex items-center gap-4">

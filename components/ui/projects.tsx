@@ -56,7 +56,7 @@ export default function Projects() {
           </a>
           <CardHeader className="transition-colors duration-300 group-hover:bg-primary/5">
             <div className="flex items-center justify-between gap-3 flex-wrap">
-              <CardTitle className="flex items-center gap-3">
+              <CardTitle className="flex min-w-0 items-center gap-3 text-xl/7 sm:text-2xl/7">
                 <div
                   className="flex shrink-0 items-center gap-2 rounded-lg border border-black/10 bg-white px-2 py-2 shadow-xs transition-all duration-300 dark:border-white/15 dark:bg-black group-hover:scale-105"
                   aria-hidden="true"
@@ -96,17 +96,15 @@ export default function Projects() {
                 src={project.images.light}
                 alt={`Screenshot of ${project.title} in light mode`}
                 fill
-                loading="eager"
                 className="object-contain object-top dark:hidden"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 700px"
+                sizes="(max-width: 816px) calc(100vw - 32px), 768px"
               />
               <Image
                 src={project.images.dark}
                 alt={`Screenshot of ${project.title} in dark mode`}
                 fill
-                loading="eager"
                 className="hidden object-contain object-top dark:block"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 700px"
+                sizes="(max-width: 816px) calc(100vw - 32px), 768px"
               />
             </div>
           )}

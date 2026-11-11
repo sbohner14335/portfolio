@@ -16,11 +16,11 @@ export default function ThemeToggle() {
   )
 
   if (!mounted) {
-    return <span className="block size-10" aria-hidden="true" />
+    return <span className="block h-11 w-25" aria-hidden="true" />
   }
 
   return (
-    <div className="flex items-center gap-2 transition-all duration-700 ease-out">
+    <div className="flex min-h-11 items-center gap-2 transition-all duration-700 ease-out">
       <Sun
         className={`size-5 transition-all duration-700 ease-out ${
           resolvedTheme === "dark" ? "text-[#A1A1AA] scale-75 rotate-12" : "text-foreground scale-100 rotate-0"
@@ -30,7 +30,7 @@ export default function ThemeToggle() {
         checked={resolvedTheme === "dark"}
         onCheckedChange={() => setTheme(resolvedTheme === "light" ? "dark" : "light")}
         aria-label="Toggle theme"
-        className="transition-all duration-700 ease-out hover:scale-110"
+        className="relative transition-all duration-700 ease-out before:absolute before:inset-x-0 before:-inset-y-2.5 hover:scale-110"
       />
       <Moon
         className={`size-5 transition-all duration-700 ease-out ${

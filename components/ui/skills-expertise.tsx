@@ -64,8 +64,8 @@ export default function SkillsExpertise() {
           }}
         >
           <CardHeader className="transition-colors duration-300 group-hover:bg-primary/5">
-            <CardTitle className="flex items-center gap-3">
-              <div className="rounded-lg bg-primary/10 p-3 text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground">
+            <CardTitle className="flex items-center gap-3 text-xl/7 sm:text-2xl/7">
+              <div className="shrink-0 rounded-lg bg-primary/10 p-3 text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground">
                 {category.icon}
               </div>
               <span className="transition-colors duration-300 group-hover:text-primary">{category.title}</span>
