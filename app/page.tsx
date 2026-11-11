@@ -13,7 +13,7 @@ export default function Page() {
   return (
     <div>
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur-sm supports-[backdrop-filter]:bg-background/60">
-        <div className="container mx-auto grid grid-cols-[auto_1fr] items-center gap-x-4 px-4 md:px-6 lg:grid-cols-[auto_auto_1fr]">
+        <div className="container mx-auto grid grid-cols-[auto_1fr] items-center gap-x-4 px-4 md:px-6 lg:grid-cols-[1fr_auto_1fr]">
           <Link
             href="#about"
             aria-label="Stephen Bohner, back to About"
